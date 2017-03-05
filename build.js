@@ -38,16 +38,6 @@ metalsmith(__dirname)
 	        footer: 'partials/footer'
 	        }
 	}))
-	.use(serve({
-	  port: 8082,
-	  verbose: true
-	}))
-	.use(watch({
-	    paths: {
-	      "${source}/**/*": true,
-	      "layout/**/*": "**/*",
-	    }
-	  }))
   .build(function (err) {
     if (err) {
       console.log(err);
